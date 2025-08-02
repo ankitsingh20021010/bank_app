@@ -1,0 +1,34 @@
+<!-- templates/transactions.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction History</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="max-w-2xl mx-auto mt-10 bg-white shadow-xl rounded-2xl p-6">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-6 border-b pb-2">Transaction History</h3>
+
+        {% if transactions %}
+            <ul class="space-y-3">
+                {% for t in transactions %}
+                    <li class="bg-gray-100 p-3 rounded-lg shadow-sm border">{{ t }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="text-gray-500">No transactions found.</p>
+        {% endif %}
+
+        <div class="mt-6">
+            <a href="/" class="inline-block bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-xl shadow-md transition">
+                ← Back to Dashboard
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
