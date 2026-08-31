@@ -34,7 +34,7 @@ class BankAccount:
 # Dummy Account (No login system)
 account = BankAccount("123456", "Ankit Singh", 100000)
 
-# Home Page
+# Home  Page
 @app.route('/')
 def index():
     return render_template("index.html", balance=account.get_balance(), name=account.account_holder)
@@ -62,6 +62,6 @@ def withdraw():
 def transactions():
     return render_template("transactions.html", transactions=account.get_transactions())
 
-# Run the Flask app
+# Run  the Flask app
 if __name__ == '__main__':
     app.run(debug=True)
