@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-
+#comment1
 # Initialize Flask app
 app = Flask(__name__, template_folder='templates')
 #for rank update 
